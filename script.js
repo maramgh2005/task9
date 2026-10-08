@@ -22,7 +22,7 @@ let result = 0
 array.forEach(function (product) {
 
     result += product.price * product.quantity
-    if (result >= 500) {
+    if (result >= 500 && discountProducts < 2) {
 
         product.price = product.price * 0.80
     }
