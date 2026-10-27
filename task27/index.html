@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <div class="flex items-center p-6 w-[40%] mx-auto  gap-40">
+        <h1 class="text-2xl font-bold text-gray-800  ">Invoice Management System</h1>
+        <button onclick=" changePrices()"><i class="fa-solid fa-circle-xmark text-red-900  p-2 rounded text-4xl"></i>
+        </button>
+    </div>
+    <form action="" class=" w-[40%] bg-white mx-auto mt-5 rounded p-4">
+
+        <input type="text" placeholder="product" class=" p-2  w-full block border border-gray-300  my-2.5"
+            name="product">
+        <input type="number" placeholder=" price" class=" p-2  w-full  block border border-gray-300" name="price">
+        <button type="submit"
+            class=" p-2  py-3  w-full block bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg mt-6">Add</button>
+        <button onclick=Generate()
+            class="  p-2  w-full  block  mt-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg text-base shadow transition"
+            type="button">Generate
+            Invoice</button>
+        <div class=" flex items-center my-4"> <button hidden type="button" onclick="applyCoupon()"
+                class=" text-white rounded-2xl p-3  bg-blue-600 mr-4 font-bold" name="apply">Apply
+                Coupon</button>
+            <input hidden type="text" placeholder=" Enter code" class=" p-2   block border border-gray-300  "
+                name="code">
+        </div>
+    </form>
+
+    <table hidden class="w-[50%] bg-white mx-auto mt-9 ">
+        <thead class="border border-gray-300 ">
+            <tr>
+                <th class="border border-gray-300">#</th>
+                <th class="border border-gray-300">product name</th>
+                <th class="border border-gray-300"> price</th>
+                <th class="border border-gray-300">Total</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src=" script.js"></script>
+</body>
+
+</html>
